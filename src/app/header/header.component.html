@@ -1,0 +1,66 @@
+<header class="site-header">
+  <nav class="navbar navbar-fixed-top">
+      <!-- Left utility nav -->
+      <ul class="nav navbar-nav navbar-left">
+          <!-- Desktop menu toggle -->
+          <li class="desktop-menu-toggle hidden-mobile">
+              <a href="#" data-toggle="desktop-menu" title="Desktop menu">
+                  <div class="hidden-closed">Close</div>
+                  <div class="hidden-opened"></div>
+              </a>
+          </li>
+
+          <li>
+              <!-- Company logo -->
+              <a class="horizontal-logo" [routerLink]="['/']" title="Return home">
+                  <div class="logo-image" title="NTT"></div>
+                  <div class="logo-title">
+                      <span class="integration-title">
+                          integration<br>
+                          portal
+                      </span>
+                  </div>
+              </a>
+          </li>
+      </ul>
+
+      <!-- Right utility nav -->
+      <ul class="nav navbar-nav navbar-right">
+          <!-- Dropdown menu -->
+          <li class="dropdown hidden-mobile">
+              <a href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle">
+                  <span class="fa fa-user"></span> 
+                  <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                  <li>
+                      <div class="pull-left">
+                          <em class="fas fa-sign-out-alt"></em>
+                      </div>
+                      <div class="pull-right">
+                          <a>
+                              Sign out
+                          </a>
+                      </div>
+                  </li>
+              </ul>
+          </li>
+
+          <li role="separator" class="divider hidden-mobile"></li>
+
+          <li class="hidden-mobile">
+              <div class="horizontal-logo">
+                  <span></span>
+              </div>
+          </li>
+          <li data-toggle="modal" data-target="#modal-right">
+              <button type="button" class="navbar-btn btn hidden-xs"><i aria-hidden="true" class="fa fa-cogs"></i></button>
+          </li>
+          <li class="mobile-menu-toggle hidden-desktop" data-toggle="mobile-menu">
+              <button type="button" class="navbar-btn btn">
+                  <em aria-hidden="true" class="fa fa-bars"></em>
+              </button>
+          </li>
+      </ul>
+  </nav>
+</header>

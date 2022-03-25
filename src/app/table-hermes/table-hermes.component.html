@@ -1,0 +1,25 @@
+<div class="container">
+    <h1>Integration Hermes</h1>
+    <mat-tab-group dynamicHeight>
+        <mat-tab>
+            <ng-template mat-tab-label>
+            <mat-icon>check_circle_outline</mat-icon>
+            <mat-label>Working</mat-label>
+            </ng-template>
+            <ng-template matTabContent>
+                <app-table-hermes-working></app-table-hermes-working>
+            </ng-template>
+          </mat-tab>
+
+        <mat-tab>
+            <ng-template mat-tab-label>
+                <mat-icon>error_outline</mat-icon>
+                <mat-label>Error</mat-label>
+            </ng-template>
+            <ng-template matTabContent>
+                <app-table-hermes-error></app-table-hermes-error>
+            </ng-template>
+        </mat-tab>
+
+    </mat-tab-group>
+</div>

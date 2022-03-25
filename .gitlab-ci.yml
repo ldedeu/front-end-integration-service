@@ -1,0 +1,24 @@
+stages:
+  - artifactory-image-staging
+
+artifactory-image-staging:
+    stage: artifactory-image-staging
+    tags:
+      - shell
+
+    script:
+      - docker login -u ${AZURE_REGISTRY_USER} -p ${AZURE_REGISTRY_PASSWORD} ${AZURE_REGISTRY}
+      - docker build -t ${CI_COMMIT_REF_NAME} .
+
+      - docker tag ${CI_COMMIT_REF_NAME} ${AZURE_REGISTRY}/${DOCKER_REPOSITORY}${CI_PROJECT_NAMESPACE}/${CI_PROJECT_NAME}:${CI_COMMIT_REF_NAME}
+      - docker push ${AZURE_REGISTRY}/${DOCKER_REPOSITORY}${CI_PROJECT_NAMESPACE}/${CI_PROJECT_NAME}:${CI_COMMIT_REF_NAME}
+      - docker image prune -a -f
+
+    only:
+      - release
+
+    except:
+      - merge_requests
+      - develop
+      - master
+      - staging

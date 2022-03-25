@@ -1,0 +1,25 @@
+<div class="container">
+    <h1>Integration Middleware</h1>
+    <mat-tab-group>
+        <mat-tab>
+            <ng-template mat-tab-label>
+            <mat-icon>check_circle_outline</mat-icon>
+            <mat-label>Working</mat-label>
+            </ng-template>
+            <ng-template matTabContent>
+                <app-table-working></app-table-working>
+            </ng-template>
+          </mat-tab>
+
+        <mat-tab>
+            <ng-template mat-tab-label>
+                <mat-icon>error_outline</mat-icon>
+                <mat-label>Error</mat-label>
+            </ng-template>
+            <ng-template matTabContent>
+                <app-table-error></app-table-error>
+            </ng-template>
+        </mat-tab>
+
+    </mat-tab-group>
+</div>
