@@ -1,6 +1,0 @@
-{
-    "/api": {
-    "target": "http://integrationservicenowqa.azurewebsites.net/api/IntegrationConsumer",
-    "secure": false
-    }
-}
